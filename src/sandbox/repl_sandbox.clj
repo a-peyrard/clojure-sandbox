@@ -1,8 +1,5 @@
-(ns sandbox.repl-sandbox
-  (:gen-class))
+(ns sandbox.repl-sandbox)
 
-(defn add [x y]
+(defn add2 [x y]
   (println "adding" x "+" y)
   (+ x y))
-
-(add 1 2)
