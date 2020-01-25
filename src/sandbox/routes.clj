@@ -6,10 +6,10 @@
 (defn hello-handler
   "Hello world basic handler"
   []
-  (response {:body "world"}))
+  (response "world"))
 
 (defroutes handlers
            (GET "/hello" [] (hello-handler))
-           (route/not-found (response {:body "Not Found"})))
+           (route/not-found {:status 404}))
 
 (def app handlers)
