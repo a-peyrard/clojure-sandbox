@@ -7,6 +7,7 @@
                  [compojure "1.6.1"]
                  [ring/ring-core "1.8.0"]
                  [ring/ring-jetty-adapter "1.8.0"]
+                 [org.clojure/math.numeric-tower "0.0.4"]
                  [org.clojure/tools.logging "0.5.0"]
                  [com.hynnet/logback-classic "1.1.3"]]
   :plugins [[lein-ring "0.12.5"]]
