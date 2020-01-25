@@ -2,7 +2,8 @@
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.util.response :refer [response]]
-            [clojure.tools.logging :as log]))
+            [clojure.tools.logging :as log]
+            [sandbox.routes-util :refer [wrap-response-time]]))
 
 (defn hello-handler
   "Hello world basic handler"
@@ -14,4 +15,6 @@
            (GET "/hello" [] (hello-handler))
            (route/not-found {:status 404}))
 
-(def app handlers)
+(def app
+  (-> handlers
+      wrap-response-time))
